@@ -1,0 +1,120 @@
+Adamovich_BRCA1_Cisplatin
+  curation_name: "Adamovich et al BRCA1 (Multiplex HDR assay)"
+  filepath: "/Users/danielzeiberg/Documents/research/mave_calibration/data/publications/Adamovich_BRCA1/mmc2.xlsx"
+  sheet_name: "Supp. Table S3"
+
+Adamovich_BRCA1_HDR
+  curation_name: "Adamovich et al BRCA1 (Cisplatin resistance assay)"
+  filepath: "/Users/danielzeiberg/Documents/research/mave_calibration/data/publications/Adamovich_BRCA1/mmc2.xlsx"
+  sheet_name: "Supp. Table S2"
+
+Hu_BRCA2_HDR
+  curation_name: "BRCA2 Hu et al. 2024"
+  filepath: "/data/dzeiberg/mave_calibration/data/Hu_BRCA2_HDR/raw/1-s2.0-S000292972400034X-mmc2.xlsx"
+  header_row: 1
+
+Jia_MSH2_SSM
+  curation_name: "Jia et al MSH2 SSM"
+  filepath: "/data/dzeiberg/mave_calibration/data/Jia_MSH2_SSM/raw/urn_mavedb_00000050-a-1_scores.csv"
+
+Kato_TP53
+  curation_name: "Kato TP53"
+  filepath: "/data/dzeiberg/mave_calibration/data/Kato_TP53_AIP1nWT/raw/FunctionIshiokaDownload_r20.csv"
+  note: "median of 8 assays"
+  reference_dataset: "Fortuno TP53 VCEP meta (Kato)"
+
+Giacomelli_1
+  curation_name: "Giacomelli 1 (p53 WT Nutlin-3)"
+  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv"
+
+Giacomelli_2
+  curation_name: "Giacomelli 2 (p53 null Nutlin-3)"
+  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv"
+
+Giacomelli_3
+  curation_name: "Giacomelli 3 (p53 null etoposide)"
+  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv"
+
+Giacomelli_4
+  curation_name: "Giacomelli 4 (combined phenotype score)"
+  filepaths: ["/data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv",
+              "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv",
+              "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv"]
+  note: "will need to go in, please calculate Z-score as: (Z-score(p53WT + nutlin) + Z-score(p53NULL + nutlin) − Z-score(p53NULL + etoposide))/3"
+
+Fayer_TP53
+  curation_name: "Fayer et al. TP53 (NB-classifier predictions)"
+  filepath: "/data/dzeiberg/mave_calibration/publications/Fayer_TP53/mmc2.xlsx"
+  sheet_name: "Table S4"
+  score_column: "Classifier_prob_func_normal"
+  classification_column: "Classifier_prediction"
+  classes: ["Functionally abnormal", "Functionally normal"]
+  header_row: 1
+
+Mighell_PTEN
+  curation_name: "Mighell et al PTEN (phosphatase)"
+  filepath: "/data/dzeiberg/mave_calibration/data/Mighell_PTEN_lipidPhosphataseAssay/raw/urn_mavedb_00000054-a-1_scores.csv"
+
+Matreyek_PTEN_VampSeq
+  curation_name: "Matreyek et al PTEN (VAMPseq)"
+  filepath: "/data/dzeiberg/mave_calibration/data/Matreyek_PTEN_VampSeq/raw/urn_mavedb_00000013-a-1_scores.csv"
+
+Glazer_SCN5A
+  curation_name: "Glazer et al SCN5A Jan 2020"
+  filepath: "/data/dzeiberg/mave_calibration/publications/Glazer_SCN5A/002786_supplemental_file s1.xlsx"
+  score_column: "dms"
+  classification_column: "class"
+
+Buckley_VHL_SGE
+  curation_name: "Buckley et al VHL SGE"
+  filepath: "/data/dzeiberg/mave_calibration/publications/Buckley_VHL/41588_2024_1800_MOESM4_ESM.xlsx"
+  classification_column: "function_class"
+  score_column: "function_score_final"
+  sheet_name: "ST1"
+  header_row: 1
+
+BAP1_SGE
+  curation_name: "BAP1 SGE"
+  filepath: NaN
+
+Starita_BRCA1_HDR
+  curation_name: "Starita et al BRCA1 HDR"
+  filepath: "/data/dzeiberg/mave_calibration/data/Starita_BRCA1_HDR/raw/urn_mavedb_00000081-a-2_scores.csv"
+
+Boettcher_TP53
+  curation_name: "Boetcher TP53"
+  filepath: "/data/dzeiberg/mave_calibration/data/Boettcher_TP53/raw/TP53-MITEseq_collapsed_aa_fromIntendedCodons_inFraction_BoettcherSteffen.xlsx"
+
+Erwood_BRCA2_HEK293T
+  curation_name: "Erwood et al. BRCA2 "
+  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_BRCA2_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx"
+  sheet_name: "Supplementary Table 3"
+  header_row: 1
+
+Erwood_NPC1_HEK293T
+  curation_name: "Erwood et all NPC1 HEK239T"
+  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_NPC1_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx"
+  sheetname: "Supplementary Table 1"
+  header_row: 1
+
+Erwood_NPC1_RPE1
+  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_NPC1_RPE1/raw/41587_2021_1201_MOESM3_ESM.xlsx"
+  sheetname: "Supplementary Table 2"
+  header_row: 1
+  curation_name: "Erwood et all NPC1 RPE1"
+
+Weile_CALM
+  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/CALM123/urn_mavedb_00000001-c-2_scores.csv"
+  curation_name: "CALM1/2/3 Yeast Complemtation"
+
+Weile_TPK1
+  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/TPK1/urn_mavedb_00000001-d-2_scores.csv"
+  curation_name: "TPK1 Yeast Complemtation"
+
+Weile_SUMO1
+  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/SUMO1/urn_mavedb_00000001-b-1_scores.csv"
+  curation_name: NaN
+
+Weile_UBE2I
+  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/UBE2I/urn_mavedb_00000001-a-1_scores.csv"
+  curation_name: NaN
