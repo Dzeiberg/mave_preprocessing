@@ -1,120 +1,362 @@
-Adamovich_BRCA1_Cisplatin
-  curation_name: "Adamovich et al BRCA1 (Multiplex HDR assay)"
-  filepath: "/Users/danielzeiberg/Documents/research/mave_calibration/data/publications/Adamovich_BRCA1/mmc2.xlsx"
-  sheet_name: "Supp. Table S3"
+Adamovich_BRCA1_Cisplatin:
+  curation_name: Adamovich et al BRCA1 (Multiplex HDR assay)
+  filepath: /data/dzeiberg/mave_calibration/publications/Adamovich_BRCA1/mmc2.xlsx
+  extension: xlsx
+  sheet_name: Supp. Table S3
+  score_columns:
+    - FS1_BRCA1_siRNA
+    - FS2_BRCA1_siRNA
+    - FS3_BRCA1_siRNA
+    - FS4_BRCA1_siRNA
+  amino_acid_substitution_column: variantID
+  amino_acid_substitution_format: single_letter
+  pipeline: A
+  uniprot_acc: P38398
 
-Adamovich_BRCA1_HDR
-  curation_name: "Adamovich et al BRCA1 (Cisplatin resistance assay)"
-  filepath: "/Users/danielzeiberg/Documents/research/mave_calibration/data/publications/Adamovich_BRCA1/mmc2.xlsx"
-  sheet_name: "Supp. Table S2"
+Adamovich_BRCA1_HDR:
+  curation_name: Adamovich et al BRCA1 (Cisplatin resistance assay)
+  filepath: /data/dzeiberg/mave_calibration/publications/Adamovich_BRCA1/mmc2.xlsx
+  extension: xlsx
+  sheet_name: Supp. Table S2
+  score_columns:
+    - FS1_BRCA1_siRNA
+    - FS2_BRCA1_siRNA
+    - FS3_BRCA1_siRNA
+    - FS4_BRCA1_siRNA
+  amino_acid_substitution_column: variantID
+  amino_acid_substitution_format: single_letter
+  pipeline: A
+  uniprot_acc: P38398
 
-Hu_BRCA2_HDR
-  curation_name: "BRCA2 Hu et al. 2024"
-  filepath: "/data/dzeiberg/mave_calibration/data/Hu_BRCA2_HDR/raw/1-s2.0-S000292972400034X-mmc2.xlsx"
+Findlay_BRCA1_SGE:
+  curation_name: Findlay et al BRCA1 SGE
+  filepath: /data/dzeiberg/mave_calibration/data/Findlay_BRCA1_SGE/raw/urn_mavedb_00000097-0-1_scores.csv
+  extension: csv
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro_with_transcript
+  nucleotide_substitution_column: hgvs_splice
+  nucleotide_substitution_format: hgvs_nuc_with_transcript
+  score_columns:
+    - score_rep1
+    - score_rep2
+  pipeline: B
+  uniprot_acc: P38398
+
+Hu_BRCA2_HDR:
+  curation_name: BRCA2 Hu et al. 2024
+  filepath: /data/dzeiberg/mave_calibration/data/Hu_BRCA2_HDR/raw/1-s2.0-S000292972400034X-mmc2.xlsx
+  extension: xlsx
   header_row: 1
+  amino_acid_substitution_column: protein change
+  amino_acid_substitution_format: hgvs_pro
+  nucleotide_substitution_column: coding nucleotide change
+  nucleotide_substitution_format: hgvs_nuc
+  score_columns:
+    - HDR score
+  pipeline: B
+  uniprot_acc: P51587
+  
 
-Jia_MSH2_SSM
-  curation_name: "Jia et al MSH2 SSM"
-  filepath: "/data/dzeiberg/mave_calibration/data/Jia_MSH2_SSM/raw/urn_mavedb_00000050-a-1_scores.csv"
+Jia_MSH2_SSM:
+  curation_name: Jia et al MSH2 SSM
+  filepath: /data/dzeiberg/mave_calibration/data/Jia_MSH2_SSM/raw/urn_mavedb_00000050-a-1_scores.csv
+  extension: csv
+  score_columns:
+    - score
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  pipeline: A
+  uniprot_acc: P43246
 
-Kato_TP53
-  curation_name: "Kato TP53"
-  filepath: "/data/dzeiberg/mave_calibration/data/Kato_TP53_AIP1nWT/raw/FunctionIshiokaDownload_r20.csv"
-  note: "median of 8 assays"
-  reference_dataset: "Fortuno TP53 VCEP meta (Kato)"
+Kato_TP53:
+  curation_name: Kato TP53
+  filepath: /data/dzeiberg/mave_calibration/data/Kato_TP53_AIP1nWT/raw/FunctionIshiokaDownload_r20.csv
+  extension: csv
+  note: median of 8 assays
+  pipeline: A
+  amino_acid_substitution_column: AAchange
+  amino_acid_substitution_format: single_letter
+  score_columns:
+    - WAF1nWT
+    - MDM2nWT
+    - BAXnWT
+    - h1433snWT
+    - AIP1nWT
+    - GADD45nWT
+    - NOXAnWT
+    - P53R2nWT
+  score_agg_method: median
+  pipeline: A
+  score_threshold_source: Fortuno TP53 VCEP meta (Kato)
+  postprocess_scores:
+    - normalize_benign
+  author_transcript: NM_000546
+  uniprot_acc: P04637
 
-Giacomelli_1
-  curation_name: "Giacomelli 1 (p53 WT Nutlin-3)"
-  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv"
+Giacomelli_1:
+  curation_name: Giacomelli 1 (p53 WT Nutlin-3)
+  filepath: /data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv
+  extension: csv
+  score_columns:
+    - score
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  pipeline: A
+  uniprot_acc: P04637
 
-Giacomelli_2
-  curation_name: "Giacomelli 2 (p53 null Nutlin-3)"
-  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv"
+Giacomelli_2:
+  curation_name: Giacomelli 2 (p53 null Nutlin-3)
+  filepath: /data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv
+  extension: csv
+  score_columns:
+    - score
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  pipeline: A
+  uniprot_acc: P04637
 
-Giacomelli_3
-  curation_name: "Giacomelli 3 (p53 null etoposide)"
-  filepath: "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv"
+Giacomelli_3:
+  curation_name: Giacomelli 3 (p53 null etoposide)
+  filepath: /data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv
+  extension: csv
+  score_columns:
+    - score
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  pipeline: A
+  uniprot_acc: P04637
 
-Giacomelli_4
-  curation_name: "Giacomelli 4 (combined phenotype score)"
-  filepaths: ["/data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv",
-              "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv",
-              "/data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv"]
+Giacomelli_4:
+  curation_name: Giacomelli 4 (combined phenotype score)
+  filepaths:
+    - /data/dzeiberg/mave_calibration/data/Giacomelli_p53_wtNutlin3/raw/urn_mavedb_00000068-a-1_scores.csv
+    - /data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullNutlin3/raw/urn_mavedb_00000068-b-1_scores.csv
+    - /data/dzeiberg/mave_calibration/data/Giacomelli_p53_nullEtoposide/raw/urn_mavedb_00000068-c-1_scores.csv
+  extensions:
+    - csv
+    - csv
+    - csv
   note: "will need to go in, please calculate Z-score as: (Z-score(p53WT + nutlin) + Z-score(p53NULL + nutlin) − Z-score(p53NULL + etoposide))/3"
+  uniprot_acc: P04637
 
-Fayer_TP53
-  curation_name: "Fayer et al. TP53 (NB-classifier predictions)"
-  filepath: "/data/dzeiberg/mave_calibration/publications/Fayer_TP53/mmc2.xlsx"
-  sheet_name: "Table S4"
-  score_column: "Classifier_prob_func_normal"
-  classification_column: "Classifier_prediction"
-  classes: ["Functionally abnormal", "Functionally normal"]
+Fayer_TP53:
+  curation_name: Fayer et al. TP53 (NB-classifier predictions)
+  filepath: /data/dzeiberg/mave_calibration/publications/Fayer_TP53/mmc2.xlsx
+  extension: xlsx
+  sheet_name: Table_S4
+  amino_acid_substitution_column: Variant
+  amino_acid_substitution_format: "p.single_letter"
+  score_columns:
+    - Classifier_prob_func_abnormal
+  classification_column: Classifier_prediction
+  classes: [Functionally abnormal, Functionally normal]
   header_row: 1
+  author_label_column: Classifier_prediction
+  postprocess_scores:
+    - logit
+    - normalize_benign
+  uniprot_acc: P04637
 
-Mighell_PTEN
-  curation_name: "Mighell et al PTEN (phosphatase)"
-  filepath: "/data/dzeiberg/mave_calibration/data/Mighell_PTEN_lipidPhosphataseAssay/raw/urn_mavedb_00000054-a-1_scores.csv"
-
-Matreyek_PTEN_VampSeq
-  curation_name: "Matreyek et al PTEN (VAMPseq)"
-  filepath: "/data/dzeiberg/mave_calibration/data/Matreyek_PTEN_VampSeq/raw/urn_mavedb_00000013-a-1_scores.csv"
-
-Glazer_SCN5A
-  curation_name: "Glazer et al SCN5A Jan 2020"
-  filepath: "/data/dzeiberg/mave_calibration/publications/Glazer_SCN5A/002786_supplemental_file s1.xlsx"
-  score_column: "dms"
-  classification_column: "class"
-
-Buckley_VHL_SGE
-  curation_name: "Buckley et al VHL SGE"
-  filepath: "/data/dzeiberg/mave_calibration/publications/Buckley_VHL/41588_2024_1800_MOESM4_ESM.xlsx"
-  classification_column: "function_class"
-  score_column: "function_score_final"
-  sheet_name: "ST1"
+Mighell_PTEN:
+  curation_name: Mighell et al PTEN (phosphatase)
+  filepath: /data/dzeiberg/mave_calibration/publications/Mighell_PTEN/mmc2.xlsx
+  extension: xlsx
+  sheet_name: Table S2
   header_row: 1
+  amino_acid_substitution_column: Variant (one letter)
+  amino_acid_substitution_format: single_letter
+  score_columns:
+    - A1_score
+    - A2_score
+    - A3_score
+    - B1_score
+    - B2_score
+    - B3_score
+  pipeline: A
+  uniprot_acc: P60484
 
-BAP1_SGE
-  curation_name: "BAP1 SGE"
-  filepath: NaN
 
-Starita_BRCA1_HDR
-  curation_name: "Starita et al BRCA1 HDR"
-  filepath: "/data/dzeiberg/mave_calibration/data/Starita_BRCA1_HDR/raw/urn_mavedb_00000081-a-2_scores.csv"
+Matreyek_PTEN_VampSeq:
+  curation_name: Matreyek et al PTEN (VAMPseq)
+  filepath: /data/dzeiberg/mave_calibration/data/Matreyek_PTEN_VampSeq/raw/urn_mavedb_00000013-a-1_scores.csv
+  extension: csv
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  score_columns:
+    - score1
+    - score2
+    - score3
+    - score4
+    - score5
+    - score6
+    - score7
+    - score8
+  author_transcript: NM_000314.8
+  note: 'using MANE-select transcript as none listed on curation'
+  pipeline: A
+  uniprot_acc: P60484
 
-Boettcher_TP53
-  curation_name: "Boetcher TP53"
-  filepath: "/data/dzeiberg/mave_calibration/data/Boettcher_TP53/raw/TP53-MITEseq_collapsed_aa_fromIntendedCodons_inFraction_BoettcherSteffen.xlsx"
+# Glazer_SCN5A:
+#   curation_name: Glazer et al SCN5A Jan 2020
+#   filepath: /data/dzeiberg/mave_calibration/publications/Glazer_SCN5A/002786_supplemental_file s1.xlsx
+#   extension: xlsx
+#   score_column: dms
+#   classification_column: "class"
+#   amino_acid_substitution_column: mutation
+#   amino_acid_substitution_format: single_letter
+#   score_columns:
+#     - dms
+#   pipeline: A
+#   author_transcript: NM_198056
+  
 
-Erwood_BRCA2_HEK293T
-  curation_name: "Erwood et al. BRCA2 "
-  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_BRCA2_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx"
-  sheet_name: "Supplementary Table 3"
+Buckley_VHL_SGE:
+  curation_name: Buckley et al VHL SGE
+  filepath: /data/dzeiberg/mave_calibration/publications/Buckley_VHL/41588_2024_1800_MOESM4_ESM.xlsx
+  extension: xlsx
+  classification_column: function_class
+  score_column: function_score_final
+  sheet_name: ST1
+  header_row: 2
+  amino_acid_substitution_column: pHGVS
+  amino_acid_substitution_format: p.single_letter
+  nucleotide_substitution_column: cHGVS
+  nucleotide_substitution_format: hgvs_nuc
+  classification_column: function_class
+  pos_col: hg38_pos
+  ref_col: ref
+  alt_col: alt
+  CHROM: 3
+  score_columns:
+    - function_score_final
+  pipeline: C
+  uniprot_acc: P40337
+
+BAP1_SGE:
+  curation_name: BAP1 SGE
+  filepath: /data/dzeiberg/mave_calibration/data/Waters_BAP1_SGE/extended_data_1_sge_bap1_dataset.xlsx
+  extension: xlsx
+  amino_acid_substitution_column: HGVSp
+  amino_acid_substitution_format: hgvs_pro_with_transcript
+  sheet_name: extended_data_1
+  header_row: 2
+  nucleotide_substitution_column: mave_nt
+  nucleotide_substitution_format: hgvs_nuc
+  classification_column: functional_classification
+  score_columns:
+    - functional_score
+  CHROM: 3
+  pos_col: pos
+  ref_col: ref
+  alt_col: alt
+  pipeline: C
+  uniprot_acc: Q92560
+
+Starita_BRCA1_HDR:
+  curation_name: Starita et al BRCA1 HDR
+  filepath: /data/dzeiberg/mave_calibration/data/Starita_BRCA1_HDR/raw/urn_mavedb_00000081-a-2_scores.csv
+  extension: csv
+  uniprot_acc: P38398
+  author_transcript: NM_007294
+  note: "using MANE-select transcript as none listed on curation"
+  amino_acid_substitution_column: hgvs_pro
+  amino_acid_substitution_format: hgvs_pro
+  score_columns:
+    - brca1_sort1_score
+    - brca1_sort2_score
+    - brca1_sort3_score
+    - brca1_sort4_score
+  pipeline: A
+
+# Boettcher_TP53:
+#   curation_name: Boetcher TP53
+#   filepath: /data/dzeiberg/mave_calibration/data/Boettcher_TP53/raw/TP53-MITEseq_collapsed_aa_fromIntendedCodons_inFraction_BoettcherSteffen.xlsx
+#   extension: xlsx
+#   uniprot_acc: P04637
+
+Erwood_BRCA2_HEK293T:
+  curation_name: "Erwood et al. BRCA2"
+  filepath: /data/dzeiberg/mave_calibration/data/Erwood_BRCA2_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx
+  extension: xlsx
+  sheet_name: Supplementary Table 3
   header_row: 1
+  uniprot_acc: P51587
+  amino_acid_substitution_column: Protein Annotation
+  amino_acid_substitution_format: single_letter
+  classification_column: SPE Classification
+  score_columns:
+    - Function Score
+  author_transcript: NM_000059
+  nucleotide_substitution_format: Erwood_custom
+  nucleotide_substitution_column: N/A
+  CHROM: 13
+  pos_col: start
+  ref_col: reference_base
+  alt_col: alternate_base
+  pipeline: C
 
-Erwood_NPC1_HEK293T
-  curation_name: "Erwood et all NPC1 HEK239T"
-  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_NPC1_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx"
-  sheetname: "Supplementary Table 1"
+
+Erwood_NPC1_HEK293T:
+  curation_name: Erwood et all NPC1 HEK239T
+  filepath: /data/dzeiberg/mave_calibration/data/Erwood_NPC1_HEK293T/raw/41587_2021_1201_MOESM3_ESM.xlsx
+  extension: xlsx
+  sheetname: Supplementary Table 1
   header_row: 1
+  uniprot_acc: O15118
+  amino_acid_substitution_column: Protein Annotation
+  amino_acid_substitution_format: single_letter
+  classification_column: SPE Classification
+  score_columns:
+    - Function Score
+  author_transcript: NM_000271
+  nucleotide_substitution_format: Erwood_custom
+  nucleotide_substitution_column: N/A
+  CHROM: 18
+  pos_col: start
+  ref_col: reference_base
+  alt_col: alternate_base
+  pipeline: C
 
-Erwood_NPC1_RPE1
-  filepath: "/data/dzeiberg/mave_calibration/data/Erwood_NPC1_RPE1/raw/41587_2021_1201_MOESM3_ESM.xlsx"
-  sheetname: "Supplementary Table 2"
+Erwood_NPC1_RPE1:
+  filepath: /data/dzeiberg/mave_calibration/data/Erwood_NPC1_RPE1/raw/41587_2021_1201_MOESM3_ESM.xlsx
+  extension: xlsx
+  sheetname: Supplementary Table 2
   header_row: 1
-  curation_name: "Erwood et all NPC1 RPE1"
+  curation_name: Erwood et all NPC1 RPE1
+  uniprot_acc: O15118
+  amino_acid_substitution_column: Protein Annotation
+  amino_acid_substitution_format: single_letter
+  classification_column: SPE Classification
+  score_columns:
+    - Function Score
+  author_transcript: NM_000271
+  nucleotide_substitution_format: Erwood_custom
+  nucleotide_substitution_column: N/A
+  CHROM: 18
+  pos_col: start
+  ref_col: reference_base
+  alt_col: alternate_base
+  pipeline: C
 
-Weile_CALM
-  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/CALM123/urn_mavedb_00000001-c-2_scores.csv"
-  curation_name: "CALM1/2/3 Yeast Complemtation"
+Weile_CALM:
+  filepath: /data/dzeiberg/mave_calibration/publications/Weile/CALM123/urn_mavedb_00000001-c-2_scores.csv
+  extension: csv
+  curation_name: CALM1/2/3 Yeast Complemtation
+  uniprot_acc: P0DP23
 
-Weile_TPK1
-  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/TPK1/urn_mavedb_00000001-d-2_scores.csv"
-  curation_name: "TPK1 Yeast Complemtation"
+Weile_TPK1:
+  filepath: /data/dzeiberg/mave_calibration/publications/Weile/TPK1/urn_mavedb_00000001-d-2_scores.csv
+  extension: csv
+  curation_name: TPK1 Yeast Complemtation
+  uniprot_acc: Q9H3S4
 
-Weile_SUMO1
-  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/SUMO1/urn_mavedb_00000001-b-1_scores.csv"
-  curation_name: NaN
+# Weile_SUMO1:
+#   filepath: /data/dzeiberg/mave_calibration/publications/Weile/SUMO1/urn_mavedb_00000001-b-1_scores.csv
+#   extension: csv
+#   curation_name: NaN
+#   uniprot_acc: P63165
 
-Weile_UBE2I
-  filepath: "/data/dzeiberg/mave_calibration/publications/Weile/UBE2I/urn_mavedb_00000001-a-1_scores.csv"
-  curation_name: NaN
+# Weile_UBE2I:
+#   filepath: /data/dzeiberg/mave_calibration/publications/Weile/UBE2I/urn_mavedb_00000001-a-1_scores.csv
+#   extension: csv
+#   curation_name: NaN

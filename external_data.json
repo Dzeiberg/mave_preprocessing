@@ -1,0 +1,31 @@
+{
+    "splice_ai": {
+        "spliceAIFilePath" : "/data/dbs/spliceAI/genome_scores_v1.3_ds.20a701bc58ab45b59de2576db79ac8d0/spliceai_scores.raw.snv.hg38.vcf.gz",
+        "spliceAIFilePath_hg38" : "/data/dbs/spliceAI/genome_scores_v1.3_ds.20a701bc58ab45b59de2576db79ac8d0/spliceai_scores.raw.snv.hg38.vcf.gz",
+        "spliceAIFilePath_hg19" : "/data/dbs/spliceAI/genome_scores_v1.3_ds.20a701bc58ab45b59de2576db79ac8d0/spliceai_scores.raw.snv.hg19.vcf.gz"
+
+
+    },
+    "clinvar": {
+        "GRCh38":{
+            "filepath" : "/data/dbs/clinvar/vcf/vcfGRCh38/weekly/clinvar_20240917.vcf.gz",
+            "year" : "2024",
+            "month" : "09",
+            "day" : "17"},
+        "GRCh37": {
+            "filepath" : "/data/dbs/clinvar/vcf/vcfGRCh37/weekly/clinvar_20240917.vcf.gz",
+            "year" : "2024",
+            "month" : "09",
+            "day" : "17"
+        }
+    },
+    "gnomAD": {
+        "gnomad_vcf_root": "/data/dbs/gnomad/gnomADv4.1.0/vcf/"
+    },
+    "external_tools" : {
+        "java" : "/usr/bin/java",
+        "gatk" : "/data/utilities/bio/gatk-4.4.0.0/gatk",
+        "picard_filepath": "/data/utilities/bio/picard/build/libs/picard.jar",
+        "ensembl_vep_path": "/home/dz/ensembl-vep/vep"
+    }
+}
