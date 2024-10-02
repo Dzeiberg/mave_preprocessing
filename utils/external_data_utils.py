@@ -213,7 +213,8 @@ def load_external_data(uniprot_acc,**kwargs):
                                     gene_info['STOP'],
                                     **external_config['splice_ai'],
                                     **external_config['external_tools'],
-                                    assembly='hg38')
+                                    assembly='hg38',
+                                    gene_name=gene_info['gene_name'],)
     clinvar_df = pd.merge(clinvar_df,spliceAI_scores,on=['CHROM','POS','REF','ALT'],validate='many_to_one',how='left')
     gnomAD_df = pd.merge(gnomAD_df,spliceAI_scores,on=['CHROM','POS','REF','ALT'],validate='many_to_one',how='left')
 
@@ -261,6 +262,9 @@ def querySpliceAI(chrom, position_min, position_max,**kwargs):
                             dtype={k : str for k in 'CHROM POS REF ALT'.split(" ")})
         result_df = result_df.assign(spliceAI_score=result_df.INFO.apply(lambda s: max(list(map(float,
                                                                                             s.split("|")[2:6])))))
+        if kwargs.get('gene_name',None) is not None:
+            result_df = result_df.assign(gene_name=result_df.INFO.str.split("|").str[1])
+            result_df = result_df[result_df.gene_name == kwargs['gene_name']]
         result_df.to_csv(write_dir / f"splice_ai_match_{assembly}_CHR{chrom}_{position_min}_{position_max}.tsv",sep='\t',index=False)
         return result_df
 

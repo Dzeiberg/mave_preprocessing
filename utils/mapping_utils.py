@@ -271,6 +271,7 @@ def merge_with_gnomAD_by_hgvs_nuc(scoreset, gnomAD_df):
     gnomAD_matches = gnomAD_df[(gnomAD_df.index.isin(scoreset.index)) & \
                             (gnomAD_df.Feature.isin(set(Ensembl_transcript_stable_ids).union(set(refseq_transcript))))].sort_values(by='AC',ascending=False)
     gnomAD_matches_unique = gnomAD_matches[~gnomAD_matches.index.duplicated(keep='first')]
+    # do not use hgvs_pro column from gnomAD, prefer that from scoreset
     if "hgvs_pro" in scoreset.columns:
         gnomAD_matches_unique = gnomAD_matches_unique.drop("hgvs_pro",axis=1)
     scoreset_processed = pd.merge(scoreset,gnomAD_matches_unique,

@@ -103,6 +103,8 @@ Giacomelli_1:
   amino_acid_substitution_format: hgvs_pro
   pipeline: A
   uniprot_acc: P04637
+  author_transcript: NM_000546
+  note: using transcript from Fayer et al. 2021 as I cannot find the transcript used in the original publication
 
 Giacomelli_2:
   curation_name: Giacomelli 2 (p53 null Nutlin-3)
@@ -114,6 +116,8 @@ Giacomelli_2:
   amino_acid_substitution_format: hgvs_pro
   pipeline: A
   uniprot_acc: P04637
+  author_transcript: NM_000546
+  note: using transcript from Fayer et al. 2021 as I cannot find the transcript used in the original publication
 
 Giacomelli_3:
   curation_name: Giacomelli 3 (p53 null etoposide)
@@ -125,6 +129,8 @@ Giacomelli_3:
   amino_acid_substitution_format: hgvs_pro
   pipeline: A
   uniprot_acc: P04637
+  author_transcript: NM_000546
+  note: using transcript from Fayer et al. 2021 as I cannot find the transcript used in the original publication
 
 Giacomelli_4:
   curation_name: Giacomelli 4 (combined phenotype score)
