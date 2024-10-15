@@ -95,6 +95,3 @@ def pipeline_C(scoreset_name):
 
     scoreset_config,scoreset,assay_detects_splicing,gene_info, gnomAD_df, clinvar_df = pipeline_HEAD(scoreset_name)
     return run_pipeline_C(scoreset_name, scoreset_config,scoreset,assay_detects_splicing,gene_info, gnomAD_df, clinvar_df)
-
-if __name__ == "__main__":
-    pipeline_C("Erwood_NPC1_RPE1")
